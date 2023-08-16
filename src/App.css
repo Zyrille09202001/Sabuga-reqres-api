@@ -1,38 +1,100 @@
-.App {
+body {
+  font-family: "Poppins", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f6f6f6;
+}
+
+.header {
   text-align: center;
+  background: linear-gradient(135deg, #ff6b6b, #3a1c71);
+  color: #fff;
+  padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title {
+  margin: 0;
+  font-size: 3rem;
+  letter-spacing: 2px;
+  color: #3a1c71; 
+  font-family: 'Billabong', cursive; 
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.user-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 40px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+
+@media (max-width: 768px) {
+  .user-list {
+    grid-template-columns: repeat(2, 1fr); 
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+
+
+.user-card {
+  background: linear-gradient(45deg, #f06, #fc0);
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  color: #333;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 200x; 
+  height: auto; 
 }
 
-.App-link {
-  color: #61dafb;
+
+
+.user-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.user-avatar {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.user-avatar img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.user-details {
+  padding: 20px;
+  text-align: center;
+}
+
+.user-name {
+  margin: 0;
+  font-size: 2.0rem;
+  font-weight: bold;
+  color: #444;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.user-email {
+  margin: 0;
+  font-size: 1.0rem;
+  color: #d9dce9;
 }
